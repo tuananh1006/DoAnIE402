@@ -29,6 +29,12 @@ A simple FastAPI service is provided in `backend/` to read polygon and building 
 1. Install requirements (FastAPI and SQLAlchemy).
 2. Set the `DATABASE_URL` environment variable to your PostgreSQL connection string 
    (defaults to `postgresql://postgres:password@localhost/db`).
+=======
+A simple FastAPI service is provided in `backend/` to read polygon data from a PostgreSQL database.
+
+### Setup
+1. Install requirements (FastAPI and SQLAlchemy).
+2. Set `DATABASE_URL` environment variable to your PostgreSQL connection string.
 3. Run the service:
    ```bash
    uvicorn backend.app:app --reload
