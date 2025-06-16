@@ -21,3 +21,22 @@ UrbanVista là một ứng dụng web giúp quản lý và trực quan hóa dữ
    - `npm run start`
   
 6. Truy cập vào [`đường dẫn`](http://localhost:3000/)
+
+## Backend API
+A simple FastAPI service is provided in `backend/` to read polygon data from a PostgreSQL database.
+
+### Setup
+1. Install requirements (FastAPI and SQLAlchemy).
+2. Set `DATABASE_URL` environment variable to your PostgreSQL connection string.
+3. Run the service:
+   ```bash
+   uvicorn backend.app:app --reload
+   ```
+
+### Loading data
+To import polygons from a JSON file, call the helper:
+```python
+from backend.app import load_from_json, SessionLocal
+with SessionLocal() as session:
+    load_from_json("path/to/polygons.json", session)
+```
