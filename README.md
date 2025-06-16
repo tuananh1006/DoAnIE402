@@ -23,6 +23,13 @@ UrbanVista là một ứng dụng web giúp quản lý và trực quan hóa dữ
 6. Truy cập vào [`đường dẫn`](http://localhost:3000/)
 
 ## Backend API
+A simple FastAPI service is provided in `backend/` to read polygon and building data from a PostgreSQL database. The ORM models mirror the schema described in the documentation (Building, Floor, BodyComp, etc.).
+
+### Setup
+1. Install requirements (FastAPI and SQLAlchemy).
+2. Set the `DATABASE_URL` environment variable to your PostgreSQL connection string 
+   (defaults to `postgresql://postgres:password@localhost/db`).
+=======
 A simple FastAPI service is provided in `backend/` to read polygon data from a PostgreSQL database.
 
 ### Setup
